@@ -1,0 +1,81 @@
+@keyframes backgroundAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+#timer {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.logo-container {
+    position: absolute;
+    top: 20px; /* Jarak dari atas */
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px; /* Jarak kiri dan kanan */
+}
+
+.logo-container img {
+    width: 80px; /* Ukuran logo */
+    height: 80px; /* Ukuran logo */
+    border-radius: 50%; /* Membuat logo menjadi bulat */
+}
+
+body {
+    background: linear-gradient(45deg, #0a5df7, #9500ec, #13ca75, #ec069b);
+    background-size: 400% 400%;
+    padding-top: 120px;
+    animation: backgroundAnimation 10s infinite ease-in-out;
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+img {
+    width: 100px; /* Ukuran logo */
+    height: 100px; /* Ukuran logo */
+    border-radius: 50%; /* Membuat logo menjadi bulat */
+}
+
+.card {
+    background: linear-gradient(45deg, #000000, #6603a4, #6610fa);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    width: 400px;
+}
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+}
+.btn-outline-primary {
+    transition: 0.3s;
+    font-weight: bold;
+    border: 2px solid #d209fa;
+    color: #d3c7fb;
+}
+.btn-outline-primary:hover {
+    background-color: #13ca75;
+    color: black;
+    font-weight: bold;
+    box-shadow: 0 0 15px #ffcc00;
+}
+.feedback {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: opacity 0.5s ease-in-out;
+}
