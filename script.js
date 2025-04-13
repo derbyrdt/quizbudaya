@@ -6,7 +6,12 @@ const questions = [
     { question: "Batik yang terkenal dengan motif Megamendung berasal dari?", options: ["Pekalongan", "Solo", "Cirebon"], correct: 2 },
     { question: "Reog Ponorogo merupakan seni tradisonal dari provinsi?", options: ["Jawa Timur", "Jawa Barat", "Sumatera Barat"], correct: 1 },
     { question: "Wayang kulit biasa dipertunjukan dengan alat musik?", options: ["Gamelan", "Angklung", "Kolintang"], correct: 2 },
-    { question: "Tebak gambar ini adalah rumah adat dari daerah mana?", Image: "rumah gadang" },
+    {
+        question: "Tebak gambar ini adalah rumah adat dari daerah mana?",
+        image: "rumah_gadang.png", // TAMBAHAN
+        options: ["Sumatera Barat", "Sulawesi Selatan", "Kalimantan Tengah"],
+        correct: 0
+    },
 ];
 
 let currentQuestionIndex = 0;
@@ -39,6 +44,17 @@ function loadQuestion() {
     document.getElementById("feedback").innerText = "";
     document.getElementById("feedback").style.opacity = "0";
     document.getElementById("nextBtn").disabled = true;
+    
+    if (q.image) {
+        const img =
+        document.createElement("img");
+        img.src = q.image;
+        img.alt = "Gambar soal";
+        img.style.maxWidth = "100%";
+        img.style.borderRadius = "10px";
+        img.classList.add("mb-3");
+        optionsContainer.appendChild(img);
+    }
 
     q.options.forEach((option, index) => {
         const button = document.createElement("button");
