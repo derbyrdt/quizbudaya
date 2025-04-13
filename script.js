@@ -8,7 +8,7 @@ const questions = [
     { question: "Wayang kulit biasa dipertunjukan dengan alat musik?", options: ["Gamelan", "Angklung", "Kolintang"], correct: 2 },
     {
         question: "Tebak gambar ini adalah rumah adat dari daerah mana?",
-        image: "rumah_gadang.png", // TAMBAHAN
+        image: "rumah_gadang.png.jpg", // TAMBAHAN
         options: ["Sumatera Barat", "Sulawesi Selatan", "Kalimantan Tengah"],
         correct: 0
     },
@@ -101,3 +101,4 @@ function endQuiz() {
 
 // Start the quiz by loading the first question
 loadQuestion();
+
