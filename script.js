@@ -3,7 +3,10 @@ const questions = [
     { question: "Rumah adat Tongkonan berasal dari?", options: ["Sunda", "Minang", "Toraja"], correct: 2 },
     { question: "Alat musik tradisional Angklung berasal dari provinsi?", options: ["Jawa Barat", "Jawa Tengah", "Sumatra Utara"], correct: 0 },
     { question: "Upacara Ngaben merupakan tradisi adat dari?", options: ["Lombok", "Bali", "Papua"], correct: 1 },
-    { question: "Batik yang terkenal dengan motif Megamendung berasal dari?", options: ["Pekalongan", "Solo", "Cirebon"], correct: 2 }
+    { question: "Batik yang terkenal dengan motif Megamendung berasal dari?", options: ["Pekalongan", "Solo", "Cirebon"], correct: 2 },
+    { question: "Reog Ponorogo merupakan seni tradisonal dari provinsi?", options: ["Jawa Timur", "Jawa Barat", "Sumatera Barat"], correct: 1 },
+    { question: "Wayang kulit biasa dipertunjukan dengan alat musik?", options: ["Gamelan", "Angklung", "Kolintang"], correct: 2 },
+    { question: "Tebak gambar ini adalah rumah adat dari daerah mana?", Image: "rumah gadang" },
 ];
 
 let currentQuestionIndex = 0;
