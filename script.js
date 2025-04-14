@@ -12,10 +12,16 @@ const questions = [
         options: ["Sumatera Barat", "Sulawesi Selatan", "Kalimantan Tengah"],
         correct: 0
     },
+    {
+        question: "Alat musik tradisional apakah ini?",
+        image: "sasando.png", // TAMBAHAN
+        options: ["Sasando", "Tifa", "Gendang"],
+        correct: 0
+    }
 ];
 
 let currentQuestionIndex = 0;
-let timeLeft = 30; // Timer mulai dari 30 detik
+let timeLeft = 45; // Timer mulai dari 45 detik
 let timer;
 let score = 0; // Track the score
 
@@ -33,7 +39,7 @@ function startTimer() {
 
 function loadQuestion() {
     // Reset the timer
-    timeLeft = 30;
+    timeLeft = 45;
     document.getElementById("timer").innerText = `${timeLeft} detik`;
     startTimer();
 
@@ -51,10 +57,24 @@ function loadQuestion() {
         img.src = q.image;
         img.alt = "Gambar soal";
         img.style.maxWidth = "100%";
-        img.style.borderRadius = "10px";
+        img.style.borderRadius = "30px";
         img.classList.add("mb-3");
         optionsContainer.appendChild(img);
     }
+
+
+    if (q.image) {
+        const img =
+        document.createElement("img");
+        img.src = q.image;
+        img.alt = "Gambar soal";
+        img.style.maxWidth = "100%";
+        img.style.borderRadius = "30px";
+        img.classList.add("mb-3");
+        optionsContainer.appendChild(img);
+    }
+
+
 
     q.options.forEach((option, index) => {
         const button = document.createElement("button");
@@ -101,4 +121,3 @@ function endQuiz() {
 
 // Start the quiz by loading the first question
 loadQuestion();
-
