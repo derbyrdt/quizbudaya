@@ -63,6 +63,7 @@ function loadQuestion() {
     }
 
 
+
     q.options.forEach((option, index) => {
         const button = document.createElement("button");
         button.classList.add("btn", "btn-outline-primary");
