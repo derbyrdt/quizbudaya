@@ -56,7 +56,7 @@ function loadQuestion() {
         document.createElement("img");
         img.src = q.image;
         img.alt = "Gambar soal";
-        img.style.maxWidth = "800%";
+        img.style.maxWidth = "1000%";
         img.style.borderRadius = "50px";
         img.style.display = "block";
         img.style.margin = "0 auto";
