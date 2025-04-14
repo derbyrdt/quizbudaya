@@ -14,7 +14,7 @@ const questions = [
     },
     {
         question: "Alat musik tradisional apakah ini?",
-        image: "sasando.png", // TAMBAHAN
+        image: "sasando.png.png", // TAMBAHAN
         options: ["Sasando", "Tifa", "Gendang"],
         correct: 0
     }
@@ -56,24 +56,11 @@ function loadQuestion() {
         document.createElement("img");
         img.src = q.image;
         img.alt = "Gambar soal";
-        img.style.maxWidth = "100%";
+        img.style.maxWidth = "300%";
         img.style.borderRadius = "30px";
         img.classList.add("mb-3");
         optionsContainer.appendChild(img);
     }
-
-
-    if (q.image) {
-        const img =
-        document.createElement("img");
-        img.src = q.image;
-        img.alt = "Gambar soal";
-        img.style.maxWidth = "100%";
-        img.style.borderRadius = "30px";
-        img.classList.add("mb-3");
-        optionsContainer.appendChild(img);
-    }
-
 
 
     q.options.forEach((option, index) => {
